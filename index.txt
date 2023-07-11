@@ -1,3 +1,7 @@
 hello everyone here is new user
 
 also i am third user of this project
+
+function printHello(): void {
+  console.log('Hello!');
+}

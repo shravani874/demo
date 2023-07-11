@@ -5,3 +5,8 @@ also i am third user of this project
 function printHello(): void {
   console.log('Hello!');
 }
+
+// the `?` operator here marks parameter `c` as optional
+function add(a: number, b: number, c?: number) {
+  return a + b + (c || 0);
+}

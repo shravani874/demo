@@ -63,3 +63,8 @@ a = a - b;
 
 console.log(`The value of a after swapping: ${a}`);
 console.log(`The value of b after swapping: ${b}`);
+
+Enter the first variable: 4
+Enter the second variable: 2
+The value of a after swapping: 2
+The value of b after swapping: 4

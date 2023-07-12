@@ -18,3 +18,23 @@ MergeSort(A, p, r):
     mergeSort(A, p, q)
     mergeSort(A, q+1, r)
     merge(A, p, q, r)
+
+    MERGE_SORT(arr, beg, end)  
+  
+if beg < end  
+set mid = (beg + end)/2  
+MERGE_SORT(arr, beg, mid)  
+MERGE_SORT(arr, mid + 1, end)  
+MERGE (arr, beg, mid, end)  
+end of if  
+  
+END MERGE_SORT  MERGE_SORT(arr, beg, end)  
+  
+if beg < end  
+set mid = (beg + end)/2  
+MERGE_SORT(arr, beg, mid)  
+MERGE_SORT(arr, mid + 1, end)  
+MERGE (arr, beg, mid, end)  
+end of if  
+  
+END MERGE_SORT  

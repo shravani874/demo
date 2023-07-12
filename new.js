@@ -38,3 +38,15 @@ b = temp;
 
 console.log(`The value of a after swapping: ${a}`);
 console.log(`The value of b after swapping: ${b}`);
+
+//JavaScript program to swap two variables
+
+//take input from the users
+let c = prompt('Enter the first variable: ');
+let d = prompt('Enter the second variable: ');
+
+//using destructuring assignment
+[a, b] = [b, a];
+
+console.log(`The value of a after swapping: ${a}`);
+console.log(`The value of b after swapping: ${b}`);

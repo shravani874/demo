@@ -36,5 +36,15 @@ MERGE_SORT(arr, beg, mid)
 MERGE_SORT(arr, mid + 1, end)  
 MERGE (arr, beg, mid, end)  
 end of if  
-  
+
 END MERGE_SORT  
+
+MergeSort(A, p, r):
+    if p > r 
+        return
+    q = (p+r)/2
+    mergeSort(A, p, q)
+    mergeSort(A, q+1, r)
+    merge(A, p, q, r)
+
+    MERGE_SORT(arr, beg, end)  

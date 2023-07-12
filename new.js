@@ -1,54 +1,28 @@
-const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
-const obj = JSON.parse(text, function (key, value) {
-  if (key == "birth") {
-    return new Date(value);
-  } else {
-    return value;
-  }
-});
+var result1 = [
+  { id: 1, name: "Sandra", type: "user", username: "sandra" },
+  { id: 2, name: "John", type: "admin", username: "johnny2" },
+  { id: 3, name: "Peter", type: "user", username: "pete" },
+  { id: 4, name: "Bobby", type: "user", username: "be_bob" },
+];
 
-document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;
+var result2 = [
+  { id: 2, name: "John", email: "john@example.com" },
+  { id: 4, name: "Bobby", email: "bobby@example.com" },
+];
 
-const txt = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
-const objd = JSON.parse(txt);
-obj.birth = new Date(obj.birth);
+var props = ["id", "name"];
 
-document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;
+var result = result1
+  .filter(function (o1) {
+    return !result2.some(function (o2) {
+      return o1.id === o2.id;
+    });
+  })
+  .map(function (o) {
+    return props.reduce(function (newo, name) {
+      newo[name] = o[name];
+      return newo;
+    }, {});
+  });
 
-//JavaScript program to swap two variables
-
-//take input from the users
-let a = prompt("Enter the first variable: ");
-let b = prompt("Enter the second variable: ");
-
-//using destructuring assignment
-[a, b] = [b, a];
-
-console.log(`The value of a after swapping: ${a}`);
-console.log(`The value of b after swapping: ${b}`);
-
-//JavaScript program to swap two variables
-
-//take input from the users
-let c = prompt("Enter the first variable: ");
-let d = prompt("Enter the second variable: ");
-
-//using destructuring assignment
-[a, b] = [b, a];
-
-console.log(`The value of a after swapping: ${a}`);
-console.log(`The value of b after swapping: ${b}`);
-
-//JavaScript program to swap two variables
-
-//take input from the users
-let al = prompt("Enter the first variable: ");
-let f = prompt("Enter the second variable: ");
-
-// XOR operator
-a = a ^ b;
-b = a ^ b;
-a = a ^ b;
-
-console.log(`The value of a after swapping: ${a}`);
-console.log(`The value of b after swapping: ${b}`);
+console.log(result);

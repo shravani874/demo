@@ -28,13 +28,6 @@ document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;
 let a = prompt("Enter the first variable: ");
 let b = prompt("Enter the second variable: ");
 
-//create a temporary variable
-//JavaScript program to swap two variables
-
-//take input from the users
-let a = prompt('Enter the first variable: ');
-let b = prompt('Enter the second variable: ');
-
 //using destructuring assignment
 [a, b] = [b, a];
 
@@ -44,8 +37,8 @@ console.log(`The value of b after swapping: ${b}`);
 //JavaScript program to swap two variables
 
 //take input from the users
-let c = prompt('Enter the first variable: ');
-let d = prompt('Enter the second variable: ');
+let c = prompt("Enter the first variable: ");
+let d = prompt("Enter the second variable: ");
 
 //using destructuring assignment
 [a, b] = [b, a];
